@@ -1,0 +1,89 @@
+  @font-face {font-family: "Almarai";
+  src: url("fonts/Almarai-Regular.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}  
+@font-face {font-family: "alfont";
+  src: url("fonts/alfont_com_AlFont_com_DiodrumArabic.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}  
+ body{
+   font-family:"Almarai";
+ }
+.img100 {
+    width: 100%;
+}
+ul#accordionSidebar {
+    transition: 0.5s;
+	    border-left: 1px solid #f2f2f2;
+}
+.m_title {
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: 2px solid springgreen;
+    width: max-content;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+#msgbox {
+    position: fixed;
+    background: #fafafa;
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    color: #000;
+    padding: 50px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 20px black);
+    border-radius: 20px;
+    z-index: 99999;
+    display: none;
+}
+#msgboxph {
+    position: fixed;
+    background: #fafafa;
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    color: #000;
+    padding: 30px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 20px black);
+    border-radius: 20px;
+    z-index: 99999;
+}
+#msgboxph.danger {
+    background: #c80000;
+    color: #fff;
+}
+#msgboxph.info {
+    background: #00c83e;
+    color: #fff;
+}
+.msgphbtn {
+padding: 5px 20px;
+    background: none;
+    border: initial;
+    color: #00c83e;
+    background: #fff;
+    outline: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 2px #888585;
+}
+.addingitemicon{
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: #fff;
+  box-shadow: 0 0 7px 1px #767676;
+  cursor: pointer;
+}
+.imgwid200{
+    width: 200px;
+}
+.footer_box{position:fixed;bottom: 0;text-align: center;width: 100%;background-color: #cccccc;z-index: 10000000;}
+.sidebar-divider{border: 0 !important;}
+.sidebar hr.sidebar-divider {
+    margin: 1rem 1rem 0 !important;
+}
