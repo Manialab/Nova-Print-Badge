@@ -1,6 +1,6 @@
 {
   "name": "manialab/maniaprintlab",
-  "description": "Adds badge configuration, printing and history to Laravel Nova",
+  "description": "Provides three Nova resources for managing badge configurations, badge detail settings, and print history",
   "type": "library",
   "license": "MIT",
   "require": {
