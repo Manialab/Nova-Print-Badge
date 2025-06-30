@@ -13,7 +13,7 @@ php artisan storage:link
 # 5. Clear & rebuild caches (optional but recommended)
 php artisan optimize:clear
 
-
+# -----------------------------------------------
 Configurations resource
 
 Badge Details resource
