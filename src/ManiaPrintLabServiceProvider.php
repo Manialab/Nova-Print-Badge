@@ -4,35 +4,40 @@ namespace ManiaLab\ManiaPrintLab;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Nova;
-use Laravel\Nova\Menu\MenuSection;
+// Import **your** Nova resources:
+use ManiaLab\ManiaPrintLab\Nova\Configuration;
+use ManiaLab\ManiaPrintLab\Nova\BadgeDetail;
+use ManiaLab\ManiaPrintLab\Nova\PrintingRecord;
+// Import your tool class:
+use ManiaLab\ManiaPrintLab\Tools\PrintTool;
 
 class ManiaPrintLabServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        // 1) Publish migrations for the configuration table
+        // Publish migrations when running in console
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../database/migrations/' => database_path('migrations'),
             ], 'maniaprintlab-migrations');
         }
 
-        // 2) Load routes for the print tool
+        // Load your print route
         $this->loadRoutesFrom(__DIR__ . '/routes/print.php');
 
-        // 3) Load views for the print tool
+        // Load your print view namespace
         $this->loadViewsFrom(__DIR__ . '/../resources/printlab', 'maniaprintlab');
 
-        // 4) Register Nova Resources
+        // Register **your** Nova resources
         Nova::resources([
-            Nova\Configuration::class,
-            Nova\BadgeDetail::class,
-            Nova\PrintingRecord::class,
+            Configuration::class,
+            BadgeDetail::class,
+            PrintingRecord::class,
         ]);
 
-        // 5) Register the Print Tool menu
+        // Register the Print Badges tool
         Nova::tools([
-            new Tools\PrintTool,
+            new PrintTool,
         ]);
     }
 }
