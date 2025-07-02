@@ -49,5 +49,7 @@ class BadgeDetail extends Model
         'bd_qr_width',
         'bd_margin',
         'db_color',
+        'bg_color',
+        'font_color',
     ];
 }

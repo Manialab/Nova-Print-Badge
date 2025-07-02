@@ -49,6 +49,8 @@ return new class extends Migration
             $table->integer('bd_qr_width')->default(100);
             $table->integer('bd_margin')->default(20);
             $table->string('db_color', 20)->default('#000000');
+            $table->string('bg_color', 20)->default('#000000');
+            $table->string('font_color', 20)->default('#000000');
         });
     }
 
