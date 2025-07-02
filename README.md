@@ -47,9 +47,9 @@ Nova::mainMenu(function () {
     return [
         // … existing sections …
 
-        MenuSection::make('PrintLab', [
-            MenuItem::resource(BadgeDetail::class)->name('Badge Details'),
-            MenuItem::resource(PrintingRecord::class)->name('Print Records'),
+        MenuSection::make(('PrintLab'), [
+            MenuItem::resource(BadgeDetail::class)->name(('Badge Details')),
+            MenuItem::resource(PrintingRecord::class)->name(('Print Records')),
         ])->icon('printer')->collapsable(),
     ];
 });
